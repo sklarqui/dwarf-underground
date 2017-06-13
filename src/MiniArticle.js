@@ -13,8 +13,8 @@ this.state = {
 
 renderMini(ad,i){
     return(
-       <div className="small-6 medium-3 columns other-article">
-              <a href={i}>
+       <div key={i} className="small-6 medium-3 columns other-article">
+              <a  href="#">
                 <img src={ad.link} alt={ad.decription} />
                 <p>{ad.paragraph}</p>
               </a> 

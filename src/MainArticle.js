@@ -33,6 +33,13 @@ return(
                 <span className="article-link-text">Share Post</span>
               </a>
             </div>
+            <div>
+            <label htmlFor="article-comment">Leave a Comment</label>
+            <input id="article-comment" type="text"/>
+            </div>
+           <ul>
+
+           </ul>
           </div>
 )
 }
