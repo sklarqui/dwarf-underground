@@ -2,7 +2,25 @@ import React from 'react'
 import './MainArticle.css'
 import AboutAuthor from './AboutAuthor'
 class MainArticle extends React.Component{
+  constructor(){
+super()
+this.state={
+comments:[],
 
+}
+
+  }
+commentSubmit(ev){
+  ev.preventDefault()
+ 
+  const comments=[...this.state.comments]
+  {comments.push(this.commentField)}
+  this.setState({comments})
+  ev.currentTarget.reset()
+}
+addComment(){
+
+}
 render(){
 return(
     <div className="large-8 medium-12 columns article">
@@ -34,10 +52,14 @@ return(
               </a>
             </div>
             <div>
+              <form onSubmit={this.commentSubmit.bind(this)}>
             <label htmlFor="article-comment">Leave a Comment</label>
-            <input id="article-comment" type="text"/>
+            <input id="article-comment" type="text" ref={(input) => this.commentField=input}/>
+            <button className="button" type="submit">hey</button>
+              </form>
             </div>
-           <ul>
+          
+           <ul id="comment-list">
 
            </ul>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import './MainArticle.css'
+import './MiniArticle.css'
 class MiniArticle extends React.Component{
 constructor(){
 super()
